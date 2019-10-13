@@ -13682,7 +13682,7 @@ out = output[:, -1]</code></pre>
         <span class="c1"># initialize hidden state with zero weights, and move to GPU if available</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">train_on_gpu</span><span class="p">):</span>
             <span class="n">hidden</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span>
-                  <span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">())</span>
+                      <span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">hidden</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">(),</span>
                       <span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">())</span>
@@ -13750,8 +13750,8 @@ out = output[:, -1]</code></pre>
     
     <span class="c1"># move data to GPU, if available</span>
     <span class="k">if</span><span class="p">(</span><span class="n">train_on_gpu</span><span class="p">):</span>
-            <span class="n">rnn</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
-            <span class="n">inp</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span> <span class="n">target</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+        <span class="n">rnn</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+        <span class="n">inp</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span> <span class="n">target</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
             
     <span class="n">rnn</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
         
@@ -13981,265 +13981,265 @@ out = output[:, -1]</code></pre>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training for 10 epoch(s)...
-Epoch:    1/10    Loss: 5.541405660629272
+Epoch:    1/10    Loss: 5.569646213054657
 
-Epoch:    1/10    Loss: 4.914531836986542
+Epoch:    1/10    Loss: 4.903888876914978
 
-Epoch:    1/10    Loss: 4.676093635559082
+Epoch:    1/10    Loss: 4.672388590335846
 
-Epoch:    1/10    Loss: 4.5597872076034545
+Epoch:    1/10    Loss: 4.54434988451004
 
-Epoch:    1/10    Loss: 4.549499875068665
+Epoch:    1/10    Loss: 4.5281686902046205
 
-Epoch:    1/10    Loss: 4.575721755504608
+Epoch:    1/10    Loss: 4.5664872193336485
 
-Epoch:    1/10    Loss: 4.472317995548249
+Epoch:    1/10    Loss: 4.465383111476898
 
-Epoch:    1/10    Loss: 4.351544184207916
+Epoch:    1/10    Loss: 4.343403972148895
 
-Epoch:    1/10    Loss: 4.333334186553955
+Epoch:    1/10    Loss: 4.3210724906921385
 
-Epoch:    1/10    Loss: 4.264282086372376
+Epoch:    1/10    Loss: 4.252272840976715
 
-Epoch:    1/10    Loss: 4.370926640987396
+Epoch:    1/10    Loss: 4.371095730304718
 
-Epoch:    1/10    Loss: 4.401368160247802
+Epoch:    1/10    Loss: 4.3912276711463925
 
-Epoch:    1/10    Loss: 4.401620126724243
+Epoch:    1/10    Loss: 4.391727335453034
 
-Epoch:    2/10    Loss: 4.197493517694395
+Epoch:    2/10    Loss: 4.184920583628426
 
-Epoch:    2/10    Loss: 4.024259341716767
+Epoch:    2/10    Loss: 4.0109624605178835
 
-Epoch:    2/10    Loss: 3.931096682071686
+Epoch:    2/10    Loss: 3.9138201785087587
 
-Epoch:    2/10    Loss: 3.888992449760437
+Epoch:    2/10    Loss: 3.880740828990936
 
-Epoch:    2/10    Loss: 3.9144150214195252
+Epoch:    2/10    Loss: 3.9042025117874144
 
-Epoch:    2/10    Loss: 3.9978284215927125
+Epoch:    2/10    Loss: 4.008398723125458
 
-Epoch:    2/10    Loss: 3.9296862106323243
+Epoch:    2/10    Loss: 3.9446401982307435
 
-Epoch:    2/10    Loss: 3.8516107106208803
+Epoch:    2/10    Loss: 3.8605413846969605
 
-Epoch:    2/10    Loss: 3.846919233798981
+Epoch:    2/10    Loss: 3.842089657783508
 
-Epoch:    2/10    Loss: 3.7930159134864807
+Epoch:    2/10    Loss: 3.784481876850128
 
-Epoch:    2/10    Loss: 3.922823571681976
+Epoch:    2/10    Loss: 3.9156136593818665
 
-Epoch:    2/10    Loss: 3.9489231219291687
+Epoch:    2/10    Loss: 3.926361674785614
 
-Epoch:    2/10    Loss: 3.9533065152168274
+Epoch:    2/10    Loss: 3.9235469045639038
 
-Epoch:    3/10    Loss: 3.8608841790148047
+Epoch:    3/10    Loss: 3.84044204098134
 
-Epoch:    3/10    Loss: 3.7936050367355345
+Epoch:    3/10    Loss: 3.7677185273170473
 
-Epoch:    3/10    Loss: 3.7014627079963685
+Epoch:    3/10    Loss: 3.695485861778259
 
-Epoch:    3/10    Loss: 3.6822816548347475
+Epoch:    3/10    Loss: 3.6573827176094054
 
-Epoch:    3/10    Loss: 3.6897207856178285
+Epoch:    3/10    Loss: 3.680353585243225
 
-Epoch:    3/10    Loss: 3.770015072822571
+Epoch:    3/10    Loss: 3.781810849189758
 
-Epoch:    3/10    Loss: 3.7205257048606875
+Epoch:    3/10    Loss: 3.739059875011444
 
-Epoch:    3/10    Loss: 3.6353995037078857
+Epoch:    3/10    Loss: 3.6542064056396484
 
-Epoch:    3/10    Loss: 3.642715769290924
+Epoch:    3/10    Loss: 3.6418440165519717
 
-Epoch:    3/10    Loss: 3.6049815731048582
+Epoch:    3/10    Loss: 3.5999845514297486
 
-Epoch:    3/10    Loss: 3.7294563674926757
+Epoch:    3/10    Loss: 3.7204623069763185
 
-Epoch:    3/10    Loss: 3.760483561038971
+Epoch:    3/10    Loss: 3.709243686676025
 
-Epoch:    3/10    Loss: 3.75836675453186
+Epoch:    3/10    Loss: 3.7199526662826536
 
-Epoch:    4/10    Loss: 3.679433948983831
+Epoch:    4/10    Loss: 3.6580167336404816
 
-Epoch:    4/10    Loss: 3.6387818036079405
+Epoch:    4/10    Loss: 3.5927111444473265
 
-Epoch:    4/10    Loss: 3.547465268611908
+Epoch:    4/10    Loss: 3.5276292357444765
 
-Epoch:    4/10    Loss: 3.5291243805885313
+Epoch:    4/10    Loss: 3.4953991475105286
 
-Epoch:    4/10    Loss: 3.5334885873794555
+Epoch:    4/10    Loss: 3.5144025554656984
 
-Epoch:    4/10    Loss: 3.6332821345329283
+Epoch:    4/10    Loss: 3.6310911202430725
 
-Epoch:    4/10    Loss: 3.570279508113861
+Epoch:    4/10    Loss: 3.6029968276023863
 
-Epoch:    4/10    Loss: 3.4800214414596558
+Epoch:    4/10    Loss: 3.5077578992843628
 
-Epoch:    4/10    Loss: 3.483955216407776
+Epoch:    4/10    Loss: 3.4986249899864195
 
-Epoch:    4/10    Loss: 3.4686541414260863
+Epoch:    4/10    Loss: 3.4666494555473326
 
-Epoch:    4/10    Loss: 3.6078481073379516
+Epoch:    4/10    Loss: 3.600983817577362
 
-Epoch:    4/10    Loss: 3.6239773044586183
+Epoch:    4/10    Loss: 3.573426197052002
 
-Epoch:    4/10    Loss: 3.6077454795837403
+Epoch:    4/10    Loss: 3.605087466239929
 
-Epoch:    5/10    Loss: 3.55727596297737
+Epoch:    5/10    Loss: 3.5346858205874105
 
-Epoch:    5/10    Loss: 3.532962553977966
+Epoch:    5/10    Loss: 3.4853166971206666
 
-Epoch:    5/10    Loss: 3.439123446941376
+Epoch:    5/10    Loss: 3.4185337285995483
 
-Epoch:    5/10    Loss: 3.41208798122406
+Epoch:    5/10    Loss: 3.397120719909668
 
-Epoch:    5/10    Loss: 3.4079829182624817
+Epoch:    5/10    Loss: 3.404377478122711
 
-Epoch:    5/10    Loss: 3.513206095695496
+Epoch:    5/10    Loss: 3.5253946480751037
 
-Epoch:    5/10    Loss: 3.4687505555152893
+Epoch:    5/10    Loss: 3.4875299983024597
 
-Epoch:    5/10    Loss: 3.3770572538375854
+Epoch:    5/10    Loss: 3.405537743091583
 
-Epoch:    5/10    Loss: 3.3775253133773804
+Epoch:    5/10    Loss: 3.3958568601608277
 
-Epoch:    5/10    Loss: 3.368264957904816
+Epoch:    5/10    Loss: 3.364429218292236
 
-Epoch:    5/10    Loss: 3.513787652015686
+Epoch:    5/10    Loss: 3.5005551533699037
 
-Epoch:    5/10    Loss: 3.5093737230300905
+Epoch:    5/10    Loss: 3.4673416152000427
 
-Epoch:    5/10    Loss: 3.51053590631485
+Epoch:    5/10    Loss: 3.4864660873413085
 
-Epoch:    6/10    Loss: 3.467660403202388
+Epoch:    6/10    Loss: 3.4507964955381127
 
-Epoch:    6/10    Loss: 3.4506820549964905
+Epoch:    6/10    Loss: 3.405338900089264
 
-Epoch:    6/10    Loss: 3.3568509011268617
+Epoch:    6/10    Loss: 3.3421392107009886
 
-Epoch:    6/10    Loss: 3.320682527542114
+Epoch:    6/10    Loss: 3.3130164761543273
 
-Epoch:    6/10    Loss: 3.326326665878296
+Epoch:    6/10    Loss: 3.325946174621582
 
-Epoch:    6/10    Loss: 3.425203999996185
+Epoch:    6/10    Loss: 3.438218214035034
 
-Epoch:    6/10    Loss: 3.402005268573761
+Epoch:    6/10    Loss: 3.406750172138214
 
-Epoch:    6/10    Loss: 3.308105134487152
+Epoch:    6/10    Loss: 3.32884024477005
 
-Epoch:    6/10    Loss: 3.3199634580612183
+Epoch:    6/10    Loss: 3.317576075553894
 
-Epoch:    6/10    Loss: 3.2950647659301757
+Epoch:    6/10    Loss: 3.293105420589447
 
-Epoch:    6/10    Loss: 3.431422327518463
+Epoch:    6/10    Loss: 3.4282815790176393
 
-Epoch:    6/10    Loss: 3.4203892416954043
+Epoch:    6/10    Loss: 3.388278433799744
 
-Epoch:    6/10    Loss: 3.417027232646942
+Epoch:    6/10    Loss: 3.4071144456863403
 
-Epoch:    7/10    Loss: 3.392643199232984
+Epoch:    7/10    Loss: 3.3834101939496914
 
-Epoch:    7/10    Loss: 3.387489194393158
+Epoch:    7/10    Loss: 3.3443531384468077
 
-Epoch:    7/10    Loss: 3.3050813655853273
+Epoch:    7/10    Loss: 3.277641586780548
 
-Epoch:    7/10    Loss: 3.2558418374061584
+Epoch:    7/10    Loss: 3.2539846467971802
 
-Epoch:    7/10    Loss: 3.257394485473633
+Epoch:    7/10    Loss: 3.263275703907013
 
-Epoch:    7/10    Loss: 3.3526657552719117
+Epoch:    7/10    Loss: 3.3695823040008546
 
-Epoch:    7/10    Loss: 3.3269073791503905
+Epoch:    7/10    Loss: 3.3457471075057983
 
-Epoch:    7/10    Loss: 3.258987755775452
+Epoch:    7/10    Loss: 3.285442876338959
 
-Epoch:    7/10    Loss: 3.2486652636528017
+Epoch:    7/10    Loss: 3.260405200004578
 
-Epoch:    7/10    Loss: 3.2344905433654785
+Epoch:    7/10    Loss: 3.2375488934516907
 
-Epoch:    7/10    Loss: 3.3672528977394105
+Epoch:    7/10    Loss: 3.370436939239502
 
-Epoch:    7/10    Loss: 3.365349177360535
+Epoch:    7/10    Loss: 3.3361376304626464
 
-Epoch:    7/10    Loss: 3.3443176012039184
+Epoch:    7/10    Loss: 3.341608226776123
 
-Epoch:    8/10    Loss: 3.3283822671933607
+Epoch:    8/10    Loss: 3.32905676739275
 
-Epoch:    8/10    Loss: 3.3308650379180906
+Epoch:    8/10    Loss: 3.2985602645874024
 
-Epoch:    8/10    Loss: 3.247799958229065
+Epoch:    8/10    Loss: 3.2299773263931275
 
-Epoch:    8/10    Loss: 3.210297170162201
+Epoch:    8/10    Loss: 3.20190758228302
 
-Epoch:    8/10    Loss: 3.1977394604682923
+Epoch:    8/10    Loss: 3.2117767534255983
 
-Epoch:    8/10    Loss: 3.295628936290741
+Epoch:    8/10    Loss: 3.3105455675125124
 
-Epoch:    8/10    Loss: 3.276627445220947
+Epoch:    8/10    Loss: 3.2984149770736693
 
-Epoch:    8/10    Loss: 3.197409502029419
+Epoch:    8/10    Loss: 3.2341997981071473
 
-Epoch:    8/10    Loss: 3.189616280555725
+Epoch:    8/10    Loss: 3.204292078971863
 
-Epoch:    8/10    Loss: 3.1897295150756837
+Epoch:    8/10    Loss: 3.1903437275886537
 
-Epoch:    8/10    Loss: 3.3189631962776183
+Epoch:    8/10    Loss: 3.3155577182769775
 
-Epoch:    8/10    Loss: 3.3092800788879395
+Epoch:    8/10    Loss: 3.2859347643852233
 
-Epoch:    8/10    Loss: 3.286675178050995
+Epoch:    8/10    Loss: 3.2892895097732544
 
-Epoch:    9/10    Loss: 3.280030099321003
+Epoch:    9/10    Loss: 3.2839157275917117
 
-Epoch:    9/10    Loss: 3.284225924015045
+Epoch:    9/10    Loss: 3.2492265133857727
 
-Epoch:    9/10    Loss: 3.202553064823151
+Epoch:    9/10    Loss: 3.1888844327926638
 
-Epoch:    9/10    Loss: 3.1632298069000244
+Epoch:    9/10    Loss: 3.1661140813827515
 
-Epoch:    9/10    Loss: 3.153353928565979
+Epoch:    9/10    Loss: 3.1664534668922424
 
-Epoch:    9/10    Loss: 3.2481633186340333
+Epoch:    9/10    Loss: 3.270862488269806
 
-Epoch:    9/10    Loss: 3.2352299194335936
+Epoch:    9/10    Loss: 3.2628838171958923
 
-Epoch:    9/10    Loss: 3.152991958141327
+Epoch:    9/10    Loss: 3.1905170602798463
 
-Epoch:    9/10    Loss: 3.1339757041931153
+Epoch:    9/10    Loss: 3.1589288034439087
 
-Epoch:    9/10    Loss: 3.146503803730011
+Epoch:    9/10    Loss: 3.1527077651023863
 
-Epoch:    9/10    Loss: 3.273261299610138
+Epoch:    9/10    Loss: 3.2745649905204774
 
-Epoch:    9/10    Loss: 3.2641607775688173
+Epoch:    9/10    Loss: 3.256315386772156
 
-Epoch:    9/10    Loss: 3.2415273275375367
+Epoch:    9/10    Loss: 3.2581371936798096
 
-Epoch:   10/10    Loss: 3.236905687604069
+Epoch:   10/10    Loss: 3.2420642220776927
 
-Epoch:   10/10    Loss: 3.2440443630218505
+Epoch:   10/10    Loss: 3.2144362425804136
 
-Epoch:   10/10    Loss: 3.1673119945526125
+Epoch:   10/10    Loss: 3.1593434796333315
 
-Epoch:   10/10    Loss: 3.131336670398712
+Epoch:   10/10    Loss: 3.1309784088134767
 
-Epoch:   10/10    Loss: 3.121063352108002
+Epoch:   10/10    Loss: 3.128321165084839
 
-Epoch:   10/10    Loss: 3.215939528465271
+Epoch:   10/10    Loss: 3.2270213775634766
 
-Epoch:   10/10    Loss: 3.2006998081207274
+Epoch:   10/10    Loss: 3.2273673377037047
 
-Epoch:   10/10    Loss: 3.112143567085266
+Epoch:   10/10    Loss: 3.1523736033439635
 
-Epoch:   10/10    Loss: 3.095529733181
+Epoch:   10/10    Loss: 3.118960084915161
 
-Epoch:   10/10    Loss: 3.115416139602661
+Epoch:   10/10    Loss: 3.119816872596741
 
-Epoch:   10/10    Loss: 3.235713305950165
+Epoch:   10/10    Loss: 3.23650101852417
 
-Epoch:   10/10    Loss: 3.229569128513336
+Epoch:   10/10    Loss: 3.2255920367240907
 
-Epoch:   10/10    Loss: 3.2057604999542235
+Epoch:   10/10    Loss: 3.213144190788269
 
 Model Trained and Saved
 </pre>
@@ -14387,8 +14387,6 @@ Model Trained and Saved
         <span class="k">if</span><span class="p">(</span><span class="n">train_on_gpu</span><span class="p">):</span>
             <span class="n">current_seq</span> <span class="o">=</span> <span class="n">current_seq</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span> <span class="c1"># move to cpu</span>
         <span class="c1"># the generated word becomes the next &quot;current sequence&quot; and the cycle can continue</span>
-        <span class="k">if</span> <span class="n">train_on_gpu</span><span class="p">:</span>
-            <span class="n">current_seq</span> <span class="o">=</span> <span class="n">current_seq</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
         <span class="n">current_seq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">current_seq</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
         <span class="n">current_seq</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_i</span>
     
@@ -14456,71 +14454,76 @@ Model Trained and Saved
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>george: mushrooms, and he said that i was employed, i would be able to get it.
+<pre>george: como upon a plane.
 
-[new witness: a wheelchair, a bubble, delivery samaritan- in fact, and then you could call them.
+elaine: oh, i don&#39;t want to get the picture of nbc!
 
-vandelay: objection overruled.
+jerry: so what?
 
-hoyt: you know what the ted danson would wear, i think you could be in the hill?
+elaine: what?
 
-hoyt: the contest.
+kramer: well, i guess i was watchin&#39; mortal como.
 
-jerry: i can&#39;t believe this.
+jerry: what are you doin&#39;?
 
-vandelay: you know, i think that would be a good boy.
+kramer: no no no! no problem!
 
-jerry: i can&#39;t believe this is what i was going to do and the police wear it.
+stu: you know, i was a jackass. it&#39;s a lovely boy.
 
-[new witness: the old girlfriend]
+hoyt: so, how do you know about the plane?
 
-hoyt: mr. seinfeld.
+george: i don&#39;t know.
 
-hoyt:(singing and expressions) i know who he is.
+elaine:(to jerry) what is that?
 
-hoyt: so, i don&#39;t know what to tell them about that term.
+jerry: so what? what do you say, &#39;no, and the female bubble is a victim, starving?
 
-hoyt: so what did you do for?
+george: yes!
 
-george: no, he is.
+hoyt: i can&#39;t believe that was the defendants- talker call the moops!
 
-[new witness: police detective] to go back to california?
+hoyt: so?
 
-chiles: well, i guess we were in a hotel room to latham.
+hoyt: so you were watchin&#39; your mind.
 
-[new witness: marcellino
+hoyt: so, uh, you want to come back?
 
-hoyt: hello, massachusetts.
+hoyt: and then, uh, you want to go to a library cop?
 
-chiles: so you were getting married, and the wheelchair is the lowest media.
+hoyt:(pointing at jerry) you know, the whole victim is going to be held accountable.
 
-hoyt: you wanna get out of my ear?
+chiles: i think this is a good time of nbc.
 
-bookman: no, i don&#39;t have a good time.
+jerry: you know what the defendants are in here?
 
-hoyt: what do you think of the defendants.
+george: i was in the bathroom and i pretended that was the most explanation.
+
+jerry: you know what?
+
+jerry: what do you mean?
+
+elaine: well i am going to call jill.
+
+hoyt: so how about abandoning the plane..
 
 hoyt: what?
 
-hoyt: i can&#39;t.
+elaine: what are you doing here?
 
-hoyt: i don&#39;t think so.
+jerry: well, i think we should be in a mood.
 
-hoyt: what about that guy who smothered?
+hoyt:(pointing in disgust and vigorously object to the bathroom) oh, i think so...
 
-bookman: i can&#39;t believe she was going on.
+george: you know what, what is it?
 
-jerry: i was going to call him to testify.
+elaine:(pointing to the phone) well, i think i can do that.
 
-jerry: what?
+chiles: oh...
 
-george: i know. you know, we are in the courtroom.
+hoyt: i was screamin&#39;.
 
-hoyt:(pointing at a cereal) i mean, we are going to convict the meals. i mean you know what you were in there. i don&#39;t even want a little commitment.
+chiles: i can&#39;t see this.
 
-hoyt: you wanna be a writer.
-
-hoyt: you can go. i don&#39;t think you
 </pre>
 </div>
 </div>
